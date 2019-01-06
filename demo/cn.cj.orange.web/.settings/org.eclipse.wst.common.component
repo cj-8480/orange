@@ -5,6 +5,12 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/java"/>
+        <dependent-module archiveName="cn.cj.orange.impl-0.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cn.cj.orange.impl/cn.cj.orange.impl">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cn.cj.orange.api-0.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/cn.cj.orange.api/cn.cj.orange.api">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="cn.cj.orange.web"/>
         <property name="java-output-path" value="/cn.cj.orange.web/target/classes"/>
     </wb-module>

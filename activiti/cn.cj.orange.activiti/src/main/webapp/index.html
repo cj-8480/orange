@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>新增模板</title>
+<meta charset="utf-8"></meta>
+<link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css"
+	rel="stylesheet">
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+	$(function() {
+		console.log("初始化完成");
+		$("#subBtn").click(function() {
+			console.log("提交");
+			$("#myForm").submit();
+		});
+	});
+</script>
+
+</head>
+<body>
+
+	<div class="container" style="height: 100%; width: 100%">
+		<div class="row"
+			style="background-color: #dedef8; box-shadow: nset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+			<button class="btn btn-success" data-toggle="modal"
+				data-target="#myModal">新增模板</button>
+		</div>
+	</div>
+
+	<!-- 模态框（Modal） -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+		aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">新增模板</h4>
+				</div>
+				<div class="modal-body">
+					<form id="myForm" class="form-horizontal" role="form"
+						action="/cn.cj.orange.activiti/model/create" method="POST">
+						<div class="form-group">
+							<label for="name" class="col-sm-2 control-label">名称：</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="name" name="name"
+									placeholder="请输入名称">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="key" class="col-sm-2 control-label">KEY：</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="key" name="key"
+									placeholder="请输入KEY">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="description" class="col-sm-2 control-label">描述：</label>
+							<div class="col-sm-10">
+								<textarea class="form-control" id="description"
+									name="description" placeholder="请输入描述" style="height: 200px"></textarea>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+					</button>
+					<button id="subBtn" type="button" class="btn btn-primary">
+						确定</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal -->
+</body>
+</html>
