@@ -11,7 +11,7 @@
 	<description>main_pom</description>
 
 	<properties>
-		<org.springframework.version>4.3.18.RELEASE</org.springframework.version>
+		<org.springframework.version>5.2.22.RELEASE</org.springframework.version>
 		<org.slf4j.version>1.7.13</org.slf4j.version>
 		<druid.version>1.0.23</druid.version>
 		<servlet.version>3.1.0</servlet.version>
